@@ -1,0 +1,109 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+
+$primaryColor: #E0E0E0;
+
+body {
+  background: $primaryColor;
+}
+
+.navbar-nav {
+  margin:0 auto;
+  text-align: center;
+}
+
+.nav-link {
+  font-size: 24px;
+}
+
+.nav-item {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+  font-family: 'Italianno', cursive;
+  font-size: 34px;
+  padding: 0px;
+}
+
+@media (max-width: 767.98px) {
+  .nav-item {
+    border-bottom: solid 1px $primaryColor;
+  }
+  .carousel-item  {
+    max-height: 180px !important;
+  }
+
+  .my-button {
+    text-align : left !important;
+  }
+}
+
+carousel-item img {
+  min-height: 100% !important;
+  max-height: 100% !important;
+  position: fixed;
+}
+
+.carousel-item {
+  max-height: 400px;
+}
+
+.carousel-caption h1, h2, h3, h4 {
+  color: mintcream;
+  font-family: 'Cutive', cursive;
+}
+
+.carousel-caption h1 {
+  font-size: x-large;
+}
+
+.carousel-caption h4 {
+  font-size: medium;
+}
+
+.article {
+  width: 100%;
+  background-color: #fdfdfe;
+  border-radius: 1px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.article-img {
+  width: 100% !important;
+}
+
+.article-title {
+  font-size: xx-large;
+  color: #202326;
+}
+
+.article-title:hover {
+  color: #171a1d;
+}
+
+.news-container {
+  padding: 0 !important;
+}
+.news {
+  width: 100%;
+  background-color: #fdfdfe;
+  margin-bottom : 10px;
+  height: 70px;
+}
+
+.news-img {
+  display: block;
+  height: 100%;
+  float: left;
+  margin-right: 20px;
+}
+
+.news-title {
+  color: #171a1d;
+  font-size: large;
+}

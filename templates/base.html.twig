@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Italianno|Cutive" rel="stylesheet">
+
+    <title> {% block title %}Let's Explore Symfony 4 {% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+</head>
+
+<body>
+<nav>
+    {% block nav %}
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="/">Adam Sztukowski</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav mr-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Start</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">O mnie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    {% endblock %}
+</nav>
+
+{% block slider %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item item active">
+                <img class="d-block w-100 img-responsive" src="{{ asset('build/images/slider1.jpg') }}" alt="First slide">
+                <div class="carousel-caption">
+                    <h1>Pierwszy slajd</h1>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor.</h4>
+                </div>
+            </div>
+            <div class="carousel-item item">
+                <img class="d-block w-100 img-responsive" src="{{ asset('build/images/slider2.jpg') }}" alt="Second slide">
+                <div class="carousel-caption">
+                    <h1>Drugi slajd</h1>
+                </div>
+            </div>
+            <div class="carousel-item item">
+                <img class="d-block w-100 img-responsive" src="{{ asset('build/images/slider3.jpg') }}" alt="Third slide">
+                <div class="carousel-caption">
+                    <h1>Trzeci slajd</h1>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div> <!-- end slider -->
+{% endblock %}
+
+{% block main %}
+
+{% endblock %}
+<footer class="jumbotron-fluid text-center">
+    &copy; All rights reserved.
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src ="build/js/app.js"></script>
+</body>
+</html>
