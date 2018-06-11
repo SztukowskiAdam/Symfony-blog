@@ -1,1 +1,43 @@
 {% extends 'base.html.twig' %}
+
+{% block title %} Blog - strona główna {% endblock %}
+
+
+{% block main %}
+    <main role="main" class="container-fluid main">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 ">
+
+                {% for article in articles %}
+                    <div class="article shadow-sm">
+                        <a class="article-title alert-link" href="{{ asset('article/' ~ article.id) }}">{{ article.title }}</a>
+                        <img class="img-responsive article-img" src="{{ asset('build/images/'~article.id~'.jpg') }}" alt="Second slide">
+                        <p class="lead">
+                            {{ article.shortVersionOfArticle }}
+                        </p>
+                    </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 ">
+                <div class=" news-container">
+                    <div class="news shadow-sm">
+                        <img class="news-img" src="{{ asset('build/images/archiwum1.png') }}">
+                        <div class="news-title text-right">
+                            Dłuższy tytuł artukułu w newsach.
+                        </div>
+                    </div>
+
+
+                    <div class="news text-right shadow-sm">
+                        <img class="news-img" src="{{ asset('build/images/archiwum1.png') }}">
+                        Dłuższy tytuł artukułu w newsach.
+                    </div>
+                    <div class="news shadow-sm">Archiwum 3</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}
