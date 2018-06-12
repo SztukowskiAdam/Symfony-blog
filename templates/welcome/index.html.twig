@@ -9,13 +9,16 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 ">
 
                 {% for article in articles %}
+                    <a class="alert-link" href="{{ asset('article/' ~ article.id) }}">
                     <div class="article shadow-sm">
-                        <a class="article-title alert-link" href="{{ asset('article/' ~ article.id) }}">{{ article.title }}</a>
-                        <img class="img-responsive article-img" src="{{ asset('build/images/'~article.id~'.jpg') }}" alt="Second slide">
-                        <p class="lead">
-                            {{ article.shortVersionOfArticle }}
-                        </p>
+                        <div class="thumbnail text-center">
+                            <img class="img-responsive article-img" src="{{ asset('build/images/'~article.id~'.jpg') }}" alt="Second slide">
+                            <div class="carousel-caption">
+                                <p class="h2 article-title alert-link">{{ article.title }}</p>
+                            </div>
+                        </div>
                     </div>
+                    </a>
                 {% endfor %}
 
             </div>

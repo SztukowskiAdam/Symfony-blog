@@ -71,6 +71,10 @@ carousel-item img {
   border-radius: 1px;
   padding: 5px;
   margin-bottom: 20px;
+  transition: all .2s ease-in-out;
+}
+.article:hover {
+  transform: scale(1.02);
 }
 
 .article-img {
@@ -79,11 +83,11 @@ carousel-item img {
 
 .article-title {
   font-size: xx-large;
-  color: #202326;
+  color: #fdfdfe;
 }
 
 .article-title:hover {
-  color: #171a1d;
+  color: #FFFFFF;
 }
 
 .news-container {
@@ -106,4 +110,13 @@ carousel-item img {
 .news-title {
   color: #171a1d;
   font-size: large;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.article .carousel-caption {
+  top: 10%;
+  bottom: auto;
 }

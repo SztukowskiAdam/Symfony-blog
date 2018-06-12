@@ -26,20 +26,9 @@ class Article
      * @ORM\Column(type="text")
      *
      */
-    private $shortVersionOfArticle;
 
-    /**
-     * @ORM\Column(type="text")
-     *
-     */
-    private $longVersionOfArticle;
+    private $articleBody;
 
-    /**
-     * @ORM\Column(type="datetime")
-     *
-     */
-    private $dateOfArticle;
-    
 
     // Getters and Setters
     public function getId() {
@@ -54,27 +43,11 @@ class Article
         $this->title = $title;
     }
 
-    public function getShortVersionOfArticle() {
-        return $this->shortVersionOfArticle;
+    public function getArticleBody() {
+        return $this->articleBody;
     }
 
-    public function setShortVersionOfArticle($shortVersionOfArticle) {
-        $this->shortVersionOfArticle = $shortVersionOfArticle;
-    }
-
-    public function getLongVersionOfArticle() {
-        return $this->longVersionOfArticle;
-    }
-
-    public function setLongVersionOfArticle($longVersionOfArticle) {
-        $this->longVersionOfArticle = $longVersionOfArticle;
-    }
-
-    public function getDateOfArticle() {
-        return $this->dateOfArticle;
-    }
-
-    public function setDateOfArticle($dateOfArticle) {
-        $this->dateOfArticle = $dateOfArticle;
+    public function setArticleBody($articleBody) {
+        $this->articleBody = $articleBody;
     }
 }
