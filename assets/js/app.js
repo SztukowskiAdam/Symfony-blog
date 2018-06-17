@@ -6,12 +6,19 @@ require('bootstrap');
 require('../images/slider1.jpg');
 require('../images/slider2.jpg');
 require('../images/slider3.jpg');
-require('../images/1.jpg');
-require('../images/2.jpg');
-require('../images/3.jpg');
-require('../images/4.jpg');
-require('../images/5.jpg');
 
+
+
+const deleteArticle = $('.delete-article');
+
+deleteArticle.click(function () {
+    const id = $(this).data('id');
+
+    if(confirm("Jesteś pewnien, że chcesz usunąć artykuł o id: " + id +"?")) {
+        $(document).load('/admin/delete/'+id);
+        $(this).parent().parent().remove();
+    }
+});
 
 
 $(document).ready(function() {

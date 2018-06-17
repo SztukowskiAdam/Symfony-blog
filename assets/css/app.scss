@@ -2,10 +2,10 @@
 
 
 
-$primaryColor: #E0E0E0;
+$primaryColor: #e9ecef;
 
 body {
-  background: $primaryColor;
+  background-color: $primaryColor;
 }
 
 .navbar-nav {
@@ -81,15 +81,6 @@ carousel-item img {
   width: 100% !important;
 }
 
-.article-title {
-  font-size: xx-large;
-  color: #fdfdfe;
-}
-
-.article-title:hover {
-  color: #FFFFFF;
-}
-
 .news-container {
   padding: 0 !important;
 }
@@ -119,4 +110,36 @@ carousel-item img {
 .article .carousel-caption {
   top: 10%;
   bottom: auto;
+}
+
+.article-body .article-img {
+  max-height: 500px;
+}
+
+.article-title:hover {
+  color: #FFFFFF;
+}
+.article-title {
+  color: #fdfdfe;
+  background-color: rgba(23, 26, 35, 0.8);
+  border: 2px solid #343a40;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #fdfdfe;
+  height: 60px;
+}
+
+
+.login-form {
+  margin-top: 30px;
+}
+
+.has-error {
+  color: #AA3333;
+}
+
+.admin-aricle {
+  border-bottom: 1px solid #202326;
 }

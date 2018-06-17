@@ -13,13 +13,13 @@ class User implements UserInterface, \Serializable
 {
     /**
      * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=25, unique=true
+     * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
 
@@ -29,43 +29,53 @@ class User implements UserInterface, \Serializable
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=254, unique=true)
+     * @ORM\Column(type="string", length=100, unique=true)
      */
     private $email;
 
     /**
-     * @ORM\Column(name="is_active" type="boolean")
+     * @ORM\Column(name="is_active", type="boolean")
      */
     private $isActive;
 
-    public function __construct()
-    {
+    public function getId() {
+
+       return $this->id;
+    }
+
+    public function __construct() {
+
         $this->isActive = true;
     }
 
-    public function getUsername()
-    {
+    public function getUsername() {
+
         return $this->username;
     }
 
-    public function getPassword()
-    {
+    public function getPassword() {
+
         return $this->password;
     }
 
-    public function getRoles()
-    {
-        return array('ROLE_USER');
+    public function getRoles() {
+
+        if($this->getId() == 1) return array('ROLE_ADMIN');
+        else return array('ROLE_USER');
     }
 
-    public function getSalt()
-    {
+    public function getSalt() {
+
         return null;
     }
 
+    public function eraseCredentials() {
+
+    }
+
     /** @see \Serializable::serialize() */
-    public function serialize()
-    {
+    public function serialize() {
+
         return serialize(array(
             $this->id,
             $this->username,
@@ -74,8 +84,8 @@ class User implements UserInterface, \Serializable
     }
 
     /** @see \Serializable::unserialize() */
-    public function unserialize($serialized)
-    {
+    public function unserialize($serialized) {
+
         list (
             $this->id,
             $this->username,

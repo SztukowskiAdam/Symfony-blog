@@ -1,16 +1,13 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory:
-                users:
-                    admin:
-                        password: $2y$12$o.6oWk3KNO1Joi9ylteaLeBEI8EA9ozF0dOTgg/GUQce4L3rBdxBq
-                        roles: 'ROLE_ADMIN'
-
+        our_db_provider:
+            entity:
+                class: App\Entity\User
+                property: username
 
     encoders:
-            Symfony\Component\Security\Core\User\User:
+            App\Entity\User:
                 algorithm: bcrypt
                 cost: 12
 
@@ -25,6 +22,10 @@ security:
                 login_path: login
                 check_path: login
 
+        secured_area:
+            form_login:
+                csrf_token_generator: security.csrf.token_manager
+
             # activate different ways to authenticate
 
             # http_basic: true
@@ -37,4 +38,6 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN }
+
         # - { path: ^/profile, roles: ROLE_USER }
+    access_denied_url:  /

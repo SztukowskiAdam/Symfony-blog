@@ -7,15 +7,13 @@
 
     <div class="article-body">
         <div class="thumbnail text-center">
-            <img class="img-thumbnail" src="{{ asset('build/images/'~article.id~'.jpg') }}" alt="Second slide">
-            <div class="carousel-caption">
+            <img class="img-thumbnail article-img" src="{{ asset(article.image) }}" alt="Article Image">
+            <div class="carousel-caption article-caption">
                 <p class="h2">{{ article.title }}</p>
             </div>
         </div>
     </div>
 
-
-    <main role="main" class="container-fluid main">
         <div class="row jumbotron">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
                <p class="lead text-justify">
@@ -23,7 +21,7 @@
                 </p>
             </div>
         </div>
-    </main>
+
 
 {% endblock %}
 

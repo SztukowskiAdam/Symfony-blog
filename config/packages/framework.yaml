@@ -9,6 +9,8 @@ framework:
     session:
         handler_id: ~
 
+    csrf_protection: true
+
     #esi: true
     #fragments: true
     php_errors:

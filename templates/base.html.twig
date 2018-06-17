@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Italianno|Cutive" rel="stylesheet">
 
-    <title> {% block title %}Let's Explore Symfony 4 {% endblock %}</title>
+    <title> {% block title %}Najlepszy blog w Polsce {% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
@@ -31,10 +31,10 @@
                         <a class="nav-link" href="/about">O mnie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="/login">Logowanie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Disabled</a>
+                        <a class="nav-link" href="/admin">Admin</a>
                     </li>
                 </ul>
             </div>
@@ -54,21 +54,19 @@
             <div class="carousel-item item active">
                 <img class="d-block w-100 img-responsive" src="{{ asset('build/images/slider1.jpg') }}" alt="First slide">
                 <div class="carousel-caption">
-                    <h1>Pierwszy slajd</h1>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor.</h4>
+                    <h1>Męski blog</h1>
                 </div>
             </div>
             <div class="carousel-item item">
                 <img class="d-block w-100 img-responsive" src="{{ asset('build/images/slider2.jpg') }}" alt="Second slide">
                 <div class="carousel-caption">
-                    <h1>Drugi slajd</h1>
+                    <h1>Porady na każdy temat</h1>
                 </div>
             </div>
             <div class="carousel-item item">
                 <img class="d-block w-100 img-responsive" src="{{ asset('build/images/slider3.jpg') }}" alt="Third slide">
                 <div class="carousel-caption">
-                    <h1>Trzeci slajd</h1>
+                    <h1>Mocniej, szybciej, trzeźwiej</h1>
                 </div>
             </div>
         </div>
@@ -81,12 +79,17 @@
     </div> <!-- end slider -->
 {% endblock %}
 
+<main role="main" class="container-fluid main">
 {% block main %}
 
 {% endblock %}
-<footer class="jumbotron-fluid text-center">
+</main>
+
+{% block footer %}
+<footer class="text-center jumbotron-fluid">
     &copy; All rights reserved.
 </footer>
+{% endblock %}
 
 {% block javascripts %}
 <!-- Optional JavaScript -->

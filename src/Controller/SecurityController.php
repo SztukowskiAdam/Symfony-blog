@@ -20,6 +20,8 @@ class SecurityController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
+
+
         return $this->render('security/index.html.twig', array(
             'last_username' => $lastUsername,
             'error'         => $error,

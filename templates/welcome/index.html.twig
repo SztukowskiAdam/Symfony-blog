@@ -4,7 +4,6 @@
 
 
 {% block main %}
-    <main role="main" class="container-fluid main">
         <div class="row jumbotron">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 ">
 
@@ -12,9 +11,9 @@
                     <a class="alert-link" href="{{ asset('article/' ~ article.id) }}">
                     <div class="article shadow-sm">
                         <div class="thumbnail text-center">
-                            <img class="img-responsive article-img" src="{{ asset('build/images/'~article.id~'.jpg') }}" alt="Second slide">
+                            <img class="img-responsive article-img" src="{{ asset(article.image) }}" alt="Second slide">
                             <div class="carousel-caption">
-                                <p class="h2 article-title alert-link">{{ article.title }}</p>
+                                <p class="h3 article-title alert-link">{{ article.title }}</p>
                             </div>
                         </div>
                     </div>
@@ -41,6 +40,5 @@
                 </div>
             </div>
         </div>
-    </main>
 
 {% endblock %}

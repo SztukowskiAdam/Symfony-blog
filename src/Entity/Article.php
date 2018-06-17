@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
@@ -29,6 +30,15 @@ class Article
 
     private $articleBody;
 
+    /**
+     * @ORM\Column(type="text")
+     *@Assert\File(
+     *     mimeTypes = {"image/jpeg", "image/png"},
+     *     mimeTypesMessage = "Proszę podać zdjęcie w formacie .jpg lub .png"
+     *     )
+     */
+    private $image;
+
 
     // Getters and Setters
     public function getId() {
@@ -49,5 +59,13 @@ class Article
 
     public function setArticleBody($articleBody) {
         $this->articleBody = $articleBody;
+    }
+
+    public function getImage() {
+        return $this->image;
+    }
+
+    public function setImage($image) {
+        $this->image = $image;
     }
 }
