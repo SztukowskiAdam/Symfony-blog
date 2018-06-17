@@ -2,3 +2,44 @@
 
 {% block title %}Kilka słów o mnie{% endblock %}
 
+{% block main %}
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 col-xl-2 ">
+            <div class="article shadow-sm">
+                <div class="thumbnail text-center">
+                    <img class="img-responsive article-img" src="{{ asset('images/ja.jpg') }}" alt="Second slide">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 col-xl-10 ">
+            <p class="text-justify">
+                Siemka! Nazywam się Adam Sztukowski i obecnie znajdujesz się na stronie pokazującej to,
+                co potrafię stworzyć z pomocą Frameworka Symfony.
+            </p>
+
+            <p class="text-justify">
+                Swoją przygodę z programowaniem zacząłem w liceum. Początkowo tworzyłem proste strony,
+                które zawierały jedynie HTML i CSS. Następnie wkręciłem się w C++ i nawet osiągnąłem tytuł
+                finalisty w IV edycji Ogólnopolskiego Konkursu Programistycznego PING (Więcej możesz przeczytać
+                <a href="http://www.wiping.pl/">Tutaj</a>). Po tym wydarzeniu uświadomiłem sobie, że programowanie
+                jest moją pasją. Nie wystarczało mi jednak zwykłe układanie szkieletu strony i stylizowanie go.
+                Wybór oczywiście padł na PHP. Ten język posiada wiele możliwości, przez co każdego dnia można odkrywać
+                go na nowo. W parze do programowania stoją relacyjne bazy danych. Poznałem już język SQL oraz system MySQL i Oracle.
+                W ten sposób programowanie backendowe stało się moim ulubionym zajęciem. Obecnie studiuję
+                na wydziale Informatyki i Zarządzania Politechniki Wrocławskiej, gdzie rozwijam swoje umiejętności,
+                a także poszerzam zdobywaną wiedzę.
+            </p>
+
+            <p class="text-justify">
+                Każdy programista wie, że programowanie to nie tylko nudne klepanie kodu! Poza znajomością języka PHP,
+                posiadam umiejętność pracy zespołowej, a także dobrze odnajduję się w nowych środowiskach.
+                Potrafię wytwarzać oprogramowanie zgodnie z metodologią Scum oraz znam podstawy systemu kontroli wersji
+                GIT. Opanowałem również język angielski na poziomie B2 przez co czytanie dokumentacji czy rozmowa w tym
+                języku nie jest dla mnie ogromnym wyzwaniem.
+            </p>
+
+
+        </div>
+    </div>
+{% endblock %}

@@ -14,9 +14,11 @@ class WelcomeController extends AbstractController
     public function index()
     {
         $articles = $this->getDoctrine()->getRepository(Article::class)->findBy([], ['id' => 'DESC']);
+        $archives = $this->getDoctrine()->getRepository(Article::class)->findBy([], ['id' => 'ASC'],3);
         return $this->render('welcome/index.html.twig', [
             'controller_name' => 'WelcomeController',
-            'articles' => $articles
+            'articles' => $articles,
+            'archives' => $archives
         ]);
     }
 }

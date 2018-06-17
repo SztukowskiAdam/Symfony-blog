@@ -19,24 +19,20 @@
                     </div>
                     </a>
                 {% endfor %}
-
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 ">
                 <div class=" news-container">
-                    <div class="news shadow-sm">
-                        <img class="news-img" src="{{ asset('build/images/archiwum1.png') }}">
-                        <div class="news-title text-right">
-                            Dłuższy tytuł artukułu w newsach.
-                        </div>
-                    </div>
-
-
-                    <div class="news text-right shadow-sm">
-                        <img class="news-img" src="{{ asset('build/images/archiwum1.png') }}">
-                        Dłuższy tytuł artukułu w newsach.
-                    </div>
-                    <div class="news shadow-sm">Archiwum 3</div>
+                    {% for archive in archives %}
+                        <a class="card-link" href="{{ asset('article/' ~ archive.id) }}">
+                            <div class="news shadow-sm">
+                                <img class="news-img" src="{{ asset(archive.image) }}">
+                                <div class="news-title text-right">
+                                    {{ archive.title }}
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
